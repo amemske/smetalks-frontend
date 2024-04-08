@@ -1,6 +1,15 @@
 import React from 'react';
 
-export default  async function FeaturedNews(props) {
+interface FeaturedNewsProps {
+    title: string;
+    summary: string;
+    imageUrl?: string;
+    link: string;
+    className?: string;
+}
+
+
+export default  async function FeaturedNews(props : FeaturedNewsProps) {
     const res = await fetch(
         'https://app.smetalks.co.ke/jsonapi/node/article/?fields[node--article]=title,body,field_image&include=field_image,field_tags&filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=2');
 
