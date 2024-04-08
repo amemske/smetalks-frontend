@@ -30,12 +30,12 @@ export default async function Strategy(props: StrategyProps) {
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-12 col-xxl-3 text-center text-xxl-start xl-mt-30px xl-mb-30px sm-mt-20px" >
-                        <span className="ls-2px text-uppercase text-dark-gray fw-500 lh-22 mb-15px d-block">Trending <span class="d-inline-block border-2 border-bottom border-color-transparent-base-color fw-800"></span></span>
+                        <span className="ls-2px text-uppercase text-dark-gray fw-500 lh-22 mb-15px d-block">Trending <span className="d-inline-block border-2 border-bottom border-color-transparent-base-color fw-800"></span></span>
                         <h3 className="fw-600 text-dark-gray alt-font ls-minus-1px mb-30px sm-mb-20px">Business News.</h3>
-                        <a href="#" className="btn btn-medium btn-base-color btn-slide-right btn-rounded section-link">Explore more<i class="fa-sharp fa-solid fa-arrow-right"></i><span class="bg-very-light-gray"></span></a>
+                        <a href="#" className="btn btn-medium btn-base-color btn-slide-right btn-rounded section-link">Explore more<i className="fa-sharp fa-solid fa-arrow-right"></i><span className="bg-very-light-gray"></span></a>
                     </div>
-                    <div class="col-12 col-xxl-9">
-                        <ul class="blog-grid blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" >
+                    <div className="col-12 col-xxl-9">
+                        <ul className="blog-grid blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" >
 
                             {strategyNews.map((strategy) => (
                                 <li className="grid-item" key={strategy.title}>
@@ -56,10 +56,10 @@ export default async function Strategy(props: StrategyProps) {
                                             <div className="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-15 text-uppercase">
                                                 <div className="me-auto">
                                                     <span className="text-dark-gray blog-date d-inline-block fw-600 text-transform-none">30 December 2023</span>
-                                                    <div className="text-dark-gray text-dark-gray d-inline-block author-name text-transform-none">By <a href="#" class="text-dark-gray text-decoration-line-bottom fw-600">Jessica dover</a></div>
+                                                    <div className="text-dark-gray text-dark-gray d-inline-block author-name text-transform-none">By <a href="#" className="text-dark-gray text-decoration-line-bottom fw-600">Jessica dover</a></div>
                                                 </div>
                                                 <div className="like-count fs-14">
-                                                    <a href="#"><i className="fa-regular fa-heart text-red d-inline-block"></i><span class="text-dark-gray align-middle fw-700">45</span></a>
+                                                    <a href="#"><i className="fa-regular fa-heart text-red d-inline-block"></i><span className="text-dark-gray align-middle fw-700">45</span></a>
                                                 </div>
                                             </div>
                                         </div>
