@@ -5,17 +5,17 @@ function Page(props) {
 
         <div>
 
-            <section class="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0 mb-4" style={{ backgroundImage: `url('/images/demo-corporate-customer-blog-bg.jpg')` }}>
-                <div class="opacity-extra-medium bg-blue-whale"></div>
-                <div class="container">
-                    <div class="row align-items-center justify-content-center small-screen">
-                        <div class="col-lg-8 position-relative text-center page-title-extra-large">
-                        <h1 class="m-auto text-white text-shadow-double-large fw-600 ls-minus-2px">Contact us</h1>
+            <section className="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0 mb-4" style={{ backgroundImage: `url('/images/demo-corporate-customer-blog-bg.jpg')` }}>
+                <div className="opacity-extra-medium bg-blue-whale"></div>
+                <div className="container">
+                    <div className="row align-items-center justify-content-center small-screen">
+                        <div className="col-lg-8 position-relative text-center page-title-extra-large">
+                        <h1 className="m-auto text-white text-shadow-double-large fw-600 ls-minus-2px">Contact us</h1>
                     </div>
-                    <div class="down-section text-center" >
-                        <a href="down-section" class="section-link">
-                        <div class="text-white">
-                            <i class="feather icon-feather-chevron-down icon-very-medium"></i>
+                    <div className="down-section text-center" >
+                        <a href="down-section" className="section-link">
+                        <div className="text-white">
+                            <i className="feather icon-feather-chevron-down icon-very-medium"></i>
                         </div>
                     </a>
                 </div>

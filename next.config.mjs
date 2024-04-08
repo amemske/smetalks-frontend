@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['http://smebusinessmagazine.test/'], // Replace with your actual Drupal domain
+        domains: ['http://app.smetalks.co.ke'], // Replace with your actual Drupal domain
     },
 };
 
