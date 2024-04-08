@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Footer(props) {
+interface FooterProps {
+
+}
+
+function Footer(props: FooterProps) {
     return (
         <footer className="p-0 position-relative" id="footer">
             <div
@@ -58,7 +62,7 @@ function Footer(props) {
                                     <input
                                         className="input-medium bg-transparent border-color-transparent-base-color w-100 form-control pe-50px ps-20px lg-ps-15px required"
                                         type="email" name="email" placeholder="Enter email address"/>
-                                    <input type="hidden" name="redirect" value/>
+                                    <input type="hidden" name="redirect" value=""/>
                                         <button className="btn pe-20px submit" aria-label="submit"><i
                                             className="icon feather icon-feather-mail icon-small text-base-color"></i>
                                         </button>

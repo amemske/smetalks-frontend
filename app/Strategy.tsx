@@ -1,6 +1,10 @@
 import React from 'react';
 
-export default async function Strategy(props) {
+interface StrategyProps {
+
+}
+
+export default async function Strategy(props: StrategyProps) {
     const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/article/?filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=5&fields[node--article]=title,body,field_image&include=field_image&sort=-created');
     const data = await res.json();
 

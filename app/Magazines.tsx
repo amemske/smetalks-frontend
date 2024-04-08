@@ -1,6 +1,10 @@
 import React from 'react';
 
-export default async function Magazines(props) {
+interface MagazineProps {
+
+}
+
+export default async function Magazines(props: MagazineProps) {
     const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/magazine_editions?fields[node--magazine_editions]=title,field_magazine_date,field_magazine_image&include=field_magazine_image&sort=-created');
     const data = await res.json();
 

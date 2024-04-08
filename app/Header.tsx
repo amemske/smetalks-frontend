@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from "next/link";
 
-function Header(props) {
+interface HeaderProps {
+
+}
+
+
+function Header(props: HeaderProps) {
     return (
             <header className="header-with-topbar">
                 <div className="header-top-bar top-bar-blue bg-dark-blue ">
