@@ -1,0 +1,84 @@
+header .navbar-brand img {
+    max-height: 66px;
+}
+
+header .navbar-brand {
+    padding: 14px 0;
+}
+
+.bg-dark-blue, .bg-dark-blue:focus {
+    background-color: #2E3192;
+}
+
+.bg-very-light-gray {
+    background-color: #eff3f7;
+}
+.bg-base-color, .down-section-line .section-line:before, .header-cart-icon .cart-count {
+    background-color: #810100;
+}
+.header-with-topbar a {
+    color: white;
+}
+
+footer .footer-logo img {
+    max-height: 65px;
+}
+
+.blog-grid {
+    display: flex;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.bg-gradient-gray-light-dark-transparent {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(32, 35, 41, .8)), to(transparent));
+    background-image: linear-gradient(to top, rgb(32 35 41 / 70%) 0, transparent 100%);
+}
+
+.home-strategy-image img {
+    height: 223px;
+    object-fit: cover;
+}
+
+.featured .blog-image img {
+    min-height: 700px;
+    object-fit: cover;
+}
+
+.page_main__nw1Wk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.featured p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.correct-fixed {
+    margin-top: 135px;
+}
+
+.grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-image img {
+    min-height: 220px;
+}
