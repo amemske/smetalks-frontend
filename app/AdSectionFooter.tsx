@@ -1,16 +1,23 @@
 import React from 'react';
 
-function AdSectionFooter(props) {
+interface AdSectionFooterProps {
+    className?: string;
+    adImageSrc: string;
+    adLink: string;
+}
+
+function AdSectionFooter(props: AdSectionFooterProps) {
     return (
-        <section className="pb-10px pt-10px">
+        <section className={`pb-10px pt-10px ${props.className}`}>
             <div className="row advert mb-4">
                 <div className="col-12 text-center">
-                    <a href="#" className="border border-color-extra-medium-gray d-inline-block">
-                        <img src="images/demo-blogger-home-22.jpg" alt=""/></a>
+                    <a href={props.adLink} className="border border-color-extra-medium-gray d-inline-block">
+                        <img src={props.adImageSrc} alt=""/>
+                    </a>
                 </div>
             </div>
         </section>
-);
+    );
 }
 
 export default AdSectionFooter;
