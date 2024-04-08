@@ -31,7 +31,7 @@ function Header(props: HeaderProps) {
                                                 <h2 className="alt-font text-dark-gray text-center mb-4 fw-600 ls-minus-1px">What are you
                                                     looking for?</h2>
                                                 <input className="search-input" id="search-form-input5e219ef164995"
-                                                       placeholder="Enter your keywords..." name="s" value type="text" autoComplete="off"/>
+                                                       placeholder="Enter your keywords..." name="s" value="" type="text" autoComplete="off"/>
                                                 <button type="submit" className="search-button">
                                                     <i className="feather icon-feather-search" aria-hidden="true"></i>
                                                 </button>
