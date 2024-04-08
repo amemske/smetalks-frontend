@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    //reactStrictMode: false,
     images: {
-        domains: ['http://smebusinessmagazine.test/'], // Replace with your actual Drupal domain
+        domains: ['https://app.smetalks.co.ke/'], // Replace with your actual Drupal domain
     },
 };
 
-export default nextConfig;
+
+
+module.exports = nextConfig;

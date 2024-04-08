@@ -22,26 +22,26 @@ export default async function Magazines(props: MagazineProps) {
 
     return (
         <section>
-            <div class="container-fluid p-0">
-                <div class="row justify-content-center mb-2">
-                    <div class="col-12 col-md-8 text-center">
-                        <span class="ls-2px text-uppercase text-dark-gray fw-500 lh-22 mb-10px d-block">Browse the <span class="d-inline-block border-2 border-bottom border-color-transparent-base-color fw-800">Editions</span></span>
-                        <h3 class="fw-600 text-dark-gray alt-font ls-minus-1px w-90 mx-auto sm-w-100">Find the perfect look</h3>
+            <div className="container-fluid p-0">
+                <div className="row justify-content-center mb-2">
+                    <div className="col-12 col-md-8 text-center">
+                        <span className="ls-2px text-uppercase text-dark-gray fw-500 lh-22 mb-10px d-block">Browse the <span className="d-inline-block border-2 border-bottom border-color-transparent-base-color fw-800">Editions</span></span>
+                        <h3 className="fw-600 text-dark-gray alt-font ls-minus-1px w-90 mx-auto sm-w-100">Find the perfect look</h3>
                     </div>
                 </div>
-                <div class="row row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center" >
+                <div className="row row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center" >
 
                     {magazines.map((magazine) => (
-                        <div class="col categories-style-03 lg-mb-30px" key={magazine.title}>
-                            <div class="categories-box border-radius-6px overflow-hidden">
-                                <div class="category-image">
-                                    <a href="#" class="d-block">
+                        <div className="col categories-style-03 lg-mb-30px" key={magazine.title}>
+                            <div className="categories-box border-radius-6px overflow-hidden">
+                                <div className="category-image">
+                                    <a href="#" className="d-block">
                                         {magazine.imageUrl ? <img src={magazine.drupalBaseUrl+magazine.imageUrl} alt={magazine.title} /> : <p>Loading image...</p>}
-                                        <div class="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
+                                        <div className="position-absolute left-0px top-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                     </a>
                                 </div>
-                                <div class="category-title d-flex align-items-center">
-                                    <a href="#" class="fs-20 fw-600 text-white">{magazine.title}</a>
+                                <div className="category-title d-flex align-items-center">
+                                    <a href="#" className="fs-20 fw-600 text-white">{magazine.title}</a>
                                    </div>
                             </div>
                         </div>
