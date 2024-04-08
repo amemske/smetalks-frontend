@@ -2,14 +2,14 @@ import React from 'react';
 
 export default  async function FeaturedNews(props) {
     const res = await fetch(
-        'http://smebusinessmagazine.test/jsonapi/node/article/?fields[node--article]=title,body,field_image&include=field_image,field_tags&filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=3');
+        'https://app.smetalks.co.ke/jsonapi/node/article/?fields[node--article]=title,body,field_image&include=field_image,field_tags&filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=2');
 
     const data =await res.json();
 //const title = res.data[0].attributes.title;
     const title = data?.data?.[0]?.attributes?.title;
     const summary = data?.data?.[0]?.attributes?.body?.summary;
     const imageUrl = data?.included?.[0]?.attributes?.uri?.url;
-    const drupalBaseUrl = 'http://smebusinessmagazine.test';
+    const drupalBaseUrl = 'https://app.smetalks.co.ke';
 
     return (
         <div>

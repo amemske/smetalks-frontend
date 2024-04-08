@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default  async  function Page() {
-    const res = await fetch('http://smebusinessmagazine.test/jsonapi/node/magazine_editions?fields[node--magazine_editions]=title,field_magazine_date,field_magazine_image&include=field_magazine_image&sort=-created');
+    const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/magazine_editions?fields[node--magazine_editions]=title,field_magazine_date,field_magazine_image&include=field_magazine_image&sort=-created');
     const data = await res.json();
 
     const magazines = data.data.slice(0,5).map(magazine => {
@@ -11,7 +11,7 @@ export default  async  function Page() {
             title: magazine.attributes.title,
             date: magazine.attributes.field_magazine_date,
             imageUrl: imageFile ? imageFile.attributes.uri.url : null,
-            drupalBaseUrl: 'http://smebusinessmagazine.test'
+            drupalBaseUrl: 'https://app.smetalks.co.ke'
         };
     });
 

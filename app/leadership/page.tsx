@@ -2,7 +2,7 @@ import React from 'react';
 
 async function  Page(props) {
 
-    const res = await fetch('http://smebusinessmagazine.test/jsonapi/node/article/?filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=2&fields[node--article]=title,body,field_image&include=field_image&sort=-created');
+    const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/article/?filter[field_tags.meta.drupal_internal__target_id][condition][path]=field_tags.meta.drupal_internal__target_id&filter[field_tags.meta.drupal_internal__target_id][condition][operator]=IN&filter[field_tags.meta.drupal_internal__target_id][condition][value][]=3&fields[node--article]=title,body,field_image&include=field_image&sort=-created');
     const data = await res.json();
 
     const leadershipNews = data.data.slice(0,3).map(leadership => {
@@ -11,7 +11,7 @@ async function  Page(props) {
         return {
             title: leadership.attributes.title,
             imageUrl: imageFile?.attributes?.uri?.url ?? null,
-            drupalBaseUrl: 'http://smebusinessmagazine.test'
+            drupalBaseUrl: 'https://app.smetalks.co.ke'
         };
     });
 
@@ -22,7 +22,7 @@ async function  Page(props) {
             title: leadership.attributes.title,
             summary: leadership.attributes?.body?.summary,
             imageUrl: imageFile?.attributes?.uri?.url ?? null,
-            drupalBaseUrl: 'http://smebusinessmagazine.test'
+            drupalBaseUrl: 'https://app.smetalks.co.ke'
         };
     });
 

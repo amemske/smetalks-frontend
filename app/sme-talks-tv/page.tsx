@@ -2,7 +2,7 @@ import React from 'react';
 
 async function  Page(props) {
 
-    const res = await fetch('http://smebusinessmagazine.test/jsonapi/node/sme_videos?fields[node--sme_videos]=title,body,field_youtube_cover_image&include=field_youtube_cover_image&sort=-created');
+    const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/sme_videos?fields[node--sme_videos]=title,body,field_youtube_cover_image&include=field_youtube_cover_image&sort=-created');
     const data = await res.json();
 
     const SMEVideos = data.data.slice(0,3).map(SMEVideo => {
@@ -11,7 +11,7 @@ async function  Page(props) {
         return {
             title: SMEVideo.attributes.title,
             imageUrl: imageFile?.attributes?.uri?.url ?? null,
-            drupalBaseUrl: 'http://smebusinessmagazine.test'
+            drupalBaseUrl: 'https://app.smetalks.co.ke'
         };
     });
 
