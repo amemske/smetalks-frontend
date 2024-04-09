@@ -1,11 +1,7 @@
 import React from 'react';
 
 interface FeaturedNewsProps {
-    title: string;
-    summary: string;
-    imageUrl?: string;
-    link: string;
-    className?: string;
+
 }
 
 

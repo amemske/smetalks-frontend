@@ -1,9 +1,7 @@
 import React from 'react';
 
 interface AdSectionFooterProps {
-    className?: string;
-    adImageSrc: string;
-    adLink: string;
+
 }
 
 function AdSectionFooter(props: AdSectionFooterProps) {
