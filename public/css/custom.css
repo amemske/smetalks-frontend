@@ -82,3 +82,57 @@ section {
 .blog-image img {
     min-height: 220px;
 }
+
+footer .nav-link {
+    padding: 0rem 1rem;
+}
+
+.home-leadership-image img {
+    max-height: 279px;
+    width: 100%;
+}
+
+header .header-top-bar {
+    border-radius: 0;
+}
+
+section.half-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content section {
+    padding: 0;
+    line-height: 30px;
+    color: #333;
+}
+
+.content {
+    color: #333;
+}
+
+.search-container {
+    position: relative; /* Allows positioning of elements within*/
+  }
+  
+  .search-form {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .search-input {
+    width: 200px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially hidden */ 
+  transition: opacity 0.3s ease-in-out; 
+  }
+  
+ 
+
+  .search-input.show {
+    display: block;
+    opacity: 1; /* Visible when 'show' class is added */
+  }

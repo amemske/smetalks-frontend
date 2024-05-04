@@ -1,17 +1,17 @@
 import React from 'react';
 
 export default  async  function Page() {
-    const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/magazine_editions?fields[node--magazine_editions]=title,field_magazine_date,field_magazine_image&include=field_magazine_image&sort=-created');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/magazine?_embed');
     const data = await res.json();
 
-    const magazines = data.data.slice(0,5).map(magazine => {
-        const imageFile = data.included.find(item => item.id === magazine.relationships.field_magazine_image.data.id);
-
+    const magazines = data.slice(0,5).map(magazine => {
+ 
         return {
-            title: magazine.attributes.title,
-            date: magazine.attributes.field_magazine_date,
-            imageUrl: imageFile ? imageFile.attributes.uri.url : null,
-            drupalBaseUrl: 'https://app.smetalks.co.ke'
+            title: magazine.title.rendered,
+            link: magazine.acf.magazine_link.url,
+            date:  magazine.acf.magazine_date,
+            imageUrl: magazine._embedded?.['wp:featuredmedia']?.[0]?.media_details?.sizes?.full?.source_url || null,
+            baseUrl: 'https://backend.smetalks.co.ke'
         };
     });
 
@@ -35,13 +35,15 @@ export default  async  function Page() {
                                 <div
                                     className="card border-radius-6px border-0 box-shadow-medium-bottom box-shadow-medium-bottom-hover">
                                     <div className="blog-image">
-                                        <a href="demo-blogger-blog-single-classic.html" className="d-block">
-                                            {magazine.imageUrl ? <img src={magazine.drupalBaseUrl+magazine.imageUrl} alt={magazine.title} /> : <p>Loading image...</p>}
+                                        <a href={magazine.link} className="d-block">
+                                        {magazine.imageUrl ? 
+                        <img src={magazine.imageUrl} alt={magazine.title} /> 
+                    : <p>Loading image...</p> }
                                         </a>
 
                                     </div>
                                     <div className="card-body p-11">
-                                        <a href="demo-blogger-blog-single-classic.html"
+                                        <a href={magazine.link} target='_blank'
                                            className="card-title mb-15px fw-600 fs-18 lh-26 text-dark-gray d-inline-block">{magazine.title}</a>
                                         <div
                                             className="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-15 text-uppercase">

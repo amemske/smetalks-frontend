@@ -2,29 +2,20 @@ import React from 'react';
 
 async function  Page() {
 
-    const res = await fetch('https://app.smetalks.co.ke/jsonapi/node/sme_videos?fields[node--sme_videos]=title,body,field_youtube_cover_image&include=field_youtube_cover_image&sort=-created');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/tvtalk?_embed');
     const data = await res.json();
 
-    const SMEVideos = data.data.slice(0,3).map(SMEVideo => {
-        const imageFile = data.included.find(item => item.id === SMEVideo.relationships.field_youtube_cover_image.data.id)
-
+    const SMEVideos = data.slice(0,3).map(SMEVideo => {
+        console.log(SMEVideo.acf.youtube_link)
         return {
-            title: SMEVideo.attributes.title,
-            imageUrl: imageFile?.attributes?.uri?.url ?? null,
-            drupalBaseUrl: 'https://app.smetalks.co.ke'
+            title: SMEVideo.title.rendered,
+            imageUrl: SMEVideo._embedded?.['wp:featuredmedia']?.[0]?.media_details?.sizes?.full?.source_url || null,
+            youtubeLink: SMEVideo.acf.youtube_link // Extract from ACF
         };
     });
 
-    const leadershipNewsMore = data.data.slice(3,100).map(leadership => {
-        const imageFile = data.included.find(item => item.id === leadership.relationships.field_image.data.id)
+   
 
-        return {
-            title: leadership.attributes.title,
-            summary: leadership.attributes?.body?.summary,
-            imageUrl: imageFile?.attributes?.uri?.url ?? null,
-            drupalBaseUrl: 'http://smebusinessmagazine.test'
-        };
-    });
 
     return (
         <div>
@@ -46,16 +37,17 @@ async function  Page() {
                                         <div
                                             className="card bg-transparent border-0 border-bottom border-color-transparent-dark-very-light border-radius-0px h-100">
                                             <div className="blog-image position-relative overflow-hidden">
-                                                <a href="demo-magazine-blog-single-creative.html">
-                                                    {SMEVideo.imageUrl ? <img src={SMEVideo.drupalBaseUrl+SMEVideo.imageUrl} alt={SMEVideo.title} /> : <p>Loading image...</p>}
-                                                </a>
+                                                <a href={SMEVideo.youtubeLink} target='_blank'>
+                                                {SMEVideo.imageUrl ? 
+                        <img src={SMEVideo.imageUrl} alt={SMEVideo.title} /> 
+                    : <p>Loading image...</p> }</a>
                                             </div>
                                             <div className="card-body px-0 pt-35px pb-20px position-relative">
                                                 <div className="blog-categories position-absolute left-0px">
-                                                    <a href="demo-magazine-food.html"
+                                                    <a href="#"
                                                        className="categories-btn text-white text-white-hover bg-base-color text-uppercase fw-600">Video</a>
                                                 </div>
-                                                <a href="demo-magazine-blog-single-creative.html"
+                                                <a href={SMEVideo.youtubeLink} target='_blank'
                                                    className="card-title mb-0 alt-font fs-19 fw-600 lh-26 text-dark-gray d-inline-block w-85 xl-w-100 lg-w-70 xs-w-100">
                                                     {SMEVideo.title}</a>
                                             </div>
@@ -73,7 +65,7 @@ async function  Page() {
 
             </section>
 
-            <section className="bg-very-light-gray pb-0">
+            <section className="bg-very-light-gray mb-4 pb-2">
                 <div className="container overlap-section">
                     <div className="row justify-content-center pt-45px pb-45px g-0 cover-background" style={{ backgroundImage: `url('images/demo-magazine-home-13.jpg')`}}>
 
