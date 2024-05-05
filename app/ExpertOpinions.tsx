@@ -5,7 +5,7 @@ interface LeadershipProps {
 }
 
 export default async function Leadership(props: LeadershipProps) {
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=15&_embed');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=19&_embed');
     const data = await res.json();
 
     const LeadershipNews = data.slice(0,3).map(leadership => {

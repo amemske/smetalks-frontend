@@ -30,14 +30,9 @@ function Footer(props: FooterProps) {
                         <div className="col-md-4 col-lg-3 order-md-3 order-lg-2 sm-mb-30px">
                             <span className="fw-700 text-dark-gray d-block mb-5px fs-17">Category</span>
 
-                            
-                            <ul className="navbar-nav">
-                                <li>
-                                <Link href="/leadership" className="nav-link">Leadership</Link>                                    
-                                    </li>
-                                <li>
-                                <Link href="/business" className="nav-link">Business</Link> 
-                                </li>
+                            <ul>
+                                <li><a href="/expert-opinion">Expert Opinion</a></li>
+                                <li><a href="/business-news">Business</a></li>
                             </ul>
                         </div>
                         <div className="col-md-4 col-lg-3 order-md-4 order-lg-3 sm-mb-30px">

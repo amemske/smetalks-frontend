@@ -136,3 +136,17 @@ section.half-section {
     display: block;
     opacity: 1; /* Visible when 'show' class is added */
   }
+
+  .h1, h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+a, body {
+    color: #444444;
+}
+
+.accordion-style-02 .right-icon:hover, .btn.btn-base-color {
+    background-color: #8b2a2c;
+    color: var(--white);
+}

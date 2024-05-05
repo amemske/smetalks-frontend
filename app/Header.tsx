@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6"
-import Searchbar from './Searchbar';
 
 interface HeaderProps {
 
@@ -20,7 +19,7 @@ function Header(props: HeaderProps) {
                                 <a href="#" className="fs-14 text-medium-gray-hover"></a>
                             </div>
                             <div className="col-5 text-end header-icon">
-                               <Searchbar/>
+                               
 
                             </div>
                         </div>
