@@ -17,8 +17,7 @@ function Footer(props: FooterProps) {
                         <div className="col-md-6 col-lg-3 last-paragraph-no-margin order-md-1 md-mb-30px">
                             <a href="demo-blogger.html" className="footer-logo d-inline-block mb-10px"><img
                                 src="images/logo2.png"/></a>
-                            <p className="lh-28 d-block w-80 mb-15px">Cheiko Plaza, Kikuyu Town, </p>
-                            <div className="text-dark-gray fw-600"><FaPhoneAlt /> 0724321703
+                             <div className="text-dark-gray fw-600"><FaPhoneAlt /> 0724321703
                             </div>
                             <div className="text-dark-gray fw-600">
                             <MdEmail />  &nbsp;

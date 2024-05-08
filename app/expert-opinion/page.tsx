@@ -2,7 +2,7 @@ import React from 'react';
 
 async function  Page() {
 
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=16&_embed');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=19&_embed');
     const data = await res.json();
 
     const expertOpinions = data.slice(0,3).map(expertOpinion => {
