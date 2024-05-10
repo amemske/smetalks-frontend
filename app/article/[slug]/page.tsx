@@ -6,7 +6,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const data = await res.json();
 
   
- 
+  console.log(data);
 
 const post = data[0]; 
 const title = post.title.rendered; 
@@ -20,6 +20,8 @@ const filteredData = data.filter(item => item.id !== post.id);
 // Fetch related posts from the same category
 const relatedRes = await fetch(`https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=${post.categories[0]}&_embed&exclude=${post.id}`);
 const relatedData = await relatedRes.json();
+
+
 
 const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
   return {
@@ -41,12 +43,11 @@ const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
                     <h1 className="alt-font text-dark-gray fw-600 ls-minus-1px w-90 md-w-100">{title ? title : <p>Loading...</p> }</h1>
                 </div>
                
-                <div className="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                <div className="col-lg-10 mb-1 sm-mb-35px last-paragraph-no-margin text-center">
                 {imageUrl ? <img src={imageUrl} alt="" /> : <p>Loading...</p>}
-                    <p className="pb-20px alt-font fs-14 text-uppercase">Photography by Richard winters</p>
-                    <div className="h-1px w-100 bg-extra-medium-gray"></div>
+                  
                 </div>
-                <div className="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin">
+                <div className="col-lg-10 mb-1 sm-mb-35px last-paragraph-no-margin">
                     <div className="w-90 lg-w-100 content">
                     <div dangerouslySetInnerHTML={{ __html:  post.content.rendered}} />
                     </div>
@@ -57,37 +58,32 @@ const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
         </div>
     </section>
 
-
     <section className="half-section">
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-10">
-                 
-                    <div className="row">
-                        <div className="col-12 mb-6">
-                            <div className="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
-                                <div className="w-140px text-center me-50px sm-mx-auto">
-<div className="rounded-circle w-120px storyAvatar">  <FaUser  className="fa-2xl"/></div>
-                              
-                                    
-                                    <a href="demo-elearning-blog.html" className="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Munyaka</a>
-                                    <span className="fs-15 lh-20 d-block sm-mb-15px">Founder</span>
-                                </div>
-                                <div className="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
-                                    <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type.</p>
-                                    <a href="demo-elearning-blog.html" className="btn btn-link btn-extra-large text-dark-gray mt-15px">All author posts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </section>
+<div className="container">
+<div className="row justify-content-center">
+<div className="col-lg-10">
+
+<div className="row">
+<div className="col-12 mb-1">
+<div className="d-block d-md-flex w-100  align-items-center p-1 sm-p-35px">
+<div className="w-140px text-center me-50px sm-mx-auto">
+<img src="../images/default-avatar.png" className="rounded-circle w-80px" alt="" data-no-retina=""/>
+<a href="demo-charity-causes.html" className="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Peter Munyaka</a>
+<span className="fs-15 lh-20 d-block sm-mb-15px">Author</span>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+  
 
 
-    <section className="bg-tranquil">
+    <section className="bg-tranquil pt-2">
         <div className="container">
             <div className="row justify-content-center mb-1">
                 <div className="col-lg-7 text-center">

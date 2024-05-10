@@ -150,3 +150,11 @@ a, body {
     background-color: #8b2a2c;
     color: var(--white);
 }
+
+.text-gray-400.flex.self-end {
+    display: none;
+}
+
+.flex.flex-col.text-sm.pb-9 {
+    padding-bottom: 0 !important;
+}

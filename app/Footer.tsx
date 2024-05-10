@@ -16,7 +16,7 @@ function Footer(props: FooterProps) {
                     <div className="row">
                         <div className="col-md-6 col-lg-3 last-paragraph-no-margin order-md-1 md-mb-30px">
                             <a href="demo-blogger.html" className="footer-logo d-inline-block mb-10px"><img
-                                src="images/logo2.png"/></a>
+                                src="https://backend.smetalks.co.ke/wp-content/uploads/2024/05/logo2.png"/></a>
                              <div className="text-dark-gray fw-600"><FaPhoneAlt /> 0724321703
                             </div>
                             <div className="text-dark-gray fw-600">

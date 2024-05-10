@@ -30,7 +30,7 @@ function Header(props: HeaderProps) {
                     <div className="container">
                         <div className="col-auto p-0">
                             <Link className="navbar-brand" href="/">
-                                <img src="/images/logo2.png" className="default-logo" width="193" height="66" alt="Your Company Logo" />
+                                <img src="https://backend.smetalks.co.ke/wp-content/uploads/2024/05/logo2.png" className="default-logo" width="193" height="66" alt="Your Company Logo" />
                             </Link>
                         </div>
                         <div className="col-auto menu-order left-nav ps-40px md-ps-15px">
