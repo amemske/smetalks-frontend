@@ -2,7 +2,7 @@ import React from 'react';
 
 async function  Page() {
 
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/tvtalk?_embed');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/tvtalk?_embed', { next: { revalidate: 30 }});
     const data = await res.json();
 
     const SMEVideos = data.slice(0,3).map(SMEVideo => {

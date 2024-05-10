@@ -2,7 +2,7 @@ import { FaUser } from "react-icons/fa";
 
 export default async function Page({ params }: { params: { slug: string } }) {
 
-  const res = await fetch(`https://backend.smetalks.co.ke/wp-json/wp/v2/posts?slug=${params.slug}&_embed`);
+  const res = await fetch(`https://backend.smetalks.co.ke/wp-json/wp/v2/posts?slug=${params.slug}&_embed`, { next: { revalidate: 30 }});
   const data = await res.json();
 
   
@@ -18,7 +18,7 @@ const category = post.category
 const filteredData = data.filter(item => item.id !== post.id); 
 
 // Fetch related posts from the same category
-const relatedRes = await fetch(`https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=${post.categories[0]}&_embed&exclude=${post.id}`);
+const relatedRes = await fetch(`https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=${post.categories[0]}&_embed&exclude=${post.id}`, { next: { revalidate: 40 }});
 const relatedData = await relatedRes.json();
 
 

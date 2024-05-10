@@ -37,15 +37,14 @@ function Footer(props: FooterProps) {
                         <div className="col-md-4 col-lg-3 order-md-4 order-lg-3 sm-mb-30px">
                             <span className="fw-700 text-dark-gray d-block mb-5px fs-17">Information</span>
                             <ul>
-                                <li><a href="demo-blogger-about.html">About us</a></li>
-                                <li><a href="demo-blogger-contact.html">Contact us</a></li>
+                                <li><a href="/advertise-with-us">Advertise with us</a></li>
                             </ul>
                         </div>
                         <div className="col-md-4 col-lg-2 order-md-5 order-lg-4 sm-mb-30px">
                             <span className="fw-700 text-dark-gray d-block mb-5px fs-17">Follow us</span>
                             <ul>
-                                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                                <li><a href="https://www.youtube.com/@SMETalksTv" target="_blank">Youtube</a></li>
+                                <li><a href="https://www.facebook.com/peter.munyaka.37" target="_blank">Facebook</a></li>
                             </ul>
                         </div>
                         

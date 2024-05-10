@@ -2,7 +2,7 @@ import React from 'react';
 
 export default async function Page() {
 
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/our-contacts?_embed');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/our-contacts?_embed', { next: { revalidate: 30 }});
     const data = await res.json();
 
     // Assuming you want to display the first post

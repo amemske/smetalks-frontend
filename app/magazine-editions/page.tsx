@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default  async  function Page() {
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/magazine?_embed');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/magazine?_embed', { next: { revalidate: 30 }});
     const data = await res.json();
 
     const magazines = data.slice(0,5).map(magazine => {

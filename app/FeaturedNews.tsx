@@ -6,11 +6,11 @@ interface FeaturedNewsProps {
 
 
 export default  async function FeaturedNews(props : FeaturedNewsProps) {
-    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=18&_embed&orderby=date');
+    const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/posts?categories=18&_embed&orderby=date', { next: { revalidate: 30 }});
     const data = await res.json();
 
     // Assuming you want to display the first post
-    const latestPost = data[0]; 
+    const latestPost = data[0];     
 
     const title = latestPost.title.rendered;
     const summary = latestPost.excerpt.rendered;
