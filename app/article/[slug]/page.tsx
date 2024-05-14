@@ -11,6 +11,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 const post = data[0]; 
 const title = post.title.rendered; 
 const summary = post.content.rendered;
+const guest_author = post.acf.guest_author;
 const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || null;
 const category = post.category
 
@@ -68,8 +69,10 @@ const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
 <div className="d-block d-md-flex w-100  align-items-center p-1 sm-p-35px">
 <div className="w-140px text-center me-50px sm-mx-auto">
 <img src="../images/default-avatar.png" className="rounded-circle w-80px" alt="" data-no-retina=""/>
-<a href="demo-charity-causes.html" className="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Peter Munyaka</a>
-<span className="fs-15 lh-20 d-block sm-mb-15px">Author</span>
+<div>
+<a href="demo-charity-causes.html" className="text-dark-gray fw-500 mt-20px d-inline-block lh-20">{guest_author ? guest_author :  <span>Admin</span>  }</a>
+</div>
+<div className="fs-15 lh-20 d-block sm-mb-15px">Author</div>
 </div>
 
 </div>

@@ -35,7 +35,7 @@ export default async function Page() {
 
         <div>
 
-            <section className="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0 mb-4" style={{ backgroundImage: `url(https://backend.smetalks.co.ke/wp-content/uploads/2024/05/nairobi-bg-small.jpg)` }}>
+            <section className="top-space-margin page-title-big-typography border-radius-6px lg-border-radius-0px p-0 mb-4" style={{ backgroundImage: `url(https://backend.smetalks.co.ke/wp-content/uploads/2024/05/contact-image.jpg)` }}>
                 <div className="opacity-extra-medium bg-blue-whale"></div>
                 <div className="container">
                     <div className="row align-items-center justify-content-center small-screen">
