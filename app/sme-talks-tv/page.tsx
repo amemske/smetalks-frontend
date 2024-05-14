@@ -1,4 +1,5 @@
 import React from 'react';
+import AdSectionSingleFooter from '../AdSectionSingleFooter';
 
 async function  Page() {
 
@@ -19,7 +20,7 @@ async function  Page() {
 
     return (
         <div>
-            <section className="bg-very-light-gray position-relative overflow-hidden correct-fixed leadership-page">
+            <section className="bg-very-light-gray position-relative overflow-hidden correct-fixed leadership-page mb-2 pb-0">
                 <div className="container">
                     <div className="row justify-content-center mb-2 sm-mb-0">
                         <div className="col-lg-8 text-center">
@@ -65,23 +66,9 @@ async function  Page() {
 
             </section>
 
-            <section className="bg-very-light-gray mb-4 pb-2">
-                <div className="container overlap-section">
-                    <div className="row justify-content-center pt-45px pb-45px g-0 cover-background" style={{ backgroundImage: `url('images/demo-magazine-home-13.jpg')`}}>
+          
 
-                        <div className="col-12 position-relative justify-content-center align-items-center text-center">
-                            <div
-                                className="text-white fs-32 alt-font fw-600 d-inline-block align-middle mb-0 me-30px md-me-0 md-mb-30px">Get
-                                the latest updates mailed to you.
-                            </div>
-                            <a href="#subscribe"
-                               className="btn btn-large btn-rounded btn-white inner-link fw-700 btn-box-shadow">Subscribe
-                                now</a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+            <AdSectionSingleFooter />
 
 
         </div>

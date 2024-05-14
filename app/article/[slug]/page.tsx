@@ -1,3 +1,4 @@
+import AdSectionSingleFooter from "@/app/AdSectionSingleFooter";
 import { FaUser } from "react-icons/fa";
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -123,6 +124,8 @@ const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
             </div>
         </div>
     </section>
+
+    <AdSectionSingleFooter/>
 
   </div>
 }

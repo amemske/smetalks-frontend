@@ -1,4 +1,5 @@
 import React from 'react';
+import AdSectionFooter from '../AdSectionFooter';
 
 export default  async  function Page() {
     const res = await fetch('https://backend.smetalks.co.ke/wp-json/wp/v2/magazine?_embed', { next: { revalidate: 30 }});
@@ -58,7 +59,11 @@ export default  async  function Page() {
                     </div>
                 </div>
             </div>
+
+            <AdSectionFooter/>
         </section>
+
+        
 
     );
 }

@@ -5,8 +5,9 @@ function AdSectionFooter() {
         <section className="pb-10px pt-10px">
             <div className="row advert mb-4">
                 <div className="col-12 text-center">
-                    <a href="#" className="border border-color-extra-medium-gray d-inline-block">
-                        <img src="images/demo-blogger-home-22.jpg" alt=""/></a>
+                    <a href="/advertise-with-us" className="border border-color-extra-medium-gray d-inline-block">
+                        <img src="images/hungry.jpg" className='AdSectionFooter' alt=""/>
+                        </a>
                 </div>
             </div>
         </section>
