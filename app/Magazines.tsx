@@ -21,7 +21,7 @@ export default async function Magazines(props: MagazineProps) {
 
 
     return (
-        <section>
+        <section className='magazine-section'>
             <div className="container-fluid p-0">
                 <div className="row justify-content-center mb-2">
                     <div className="col-12 col-md-8 text-center">

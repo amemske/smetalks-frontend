@@ -23,9 +23,7 @@ export default async function Strategy(props: StrategyProps) {
     return (
 
         <section className="p-5 xxl-p-2 xl-pt-30px xl-pb-30px bg-very-light-gray border-radius-6px position-relative overflow-hidden">
-            <img src="images/demo-blogger-home-leaf-01.png" className="position-absolute top-minus-10px left-15px w-160px" alt="" />
-            <img src="images/demo-blogger-home-leaf-02.png" className="position-absolute top-minus-30px right-minus-50px" alt="" />
-            <img src="images/demo-blogger-home-leaf-03.png" className="position-absolute bottom-minus-30px left-150px" alt="" />
+       
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-12 col-xxl-3 text-center text-xxl-start xl-mt-30px xl-mb-30px sm-mt-20px" >
@@ -46,7 +44,7 @@ export default async function Strategy(props: StrategyProps) {
 : <p>Loading image...</p>}</a>
                                           
                                         </div>
-                                        <div className="card-body p-11">
+                                        <div className="card-body p-6">
                                             <a href={`/article/${strategy.slug}`} className="card-title mb-15px fw-600 fs-18 lh-26 text-dark-gray d-inline-block">
                                                 {strategy.title}
                                             </a>

@@ -22,7 +22,7 @@ export default async function Leadership(props: LeadershipProps) {
 
     return (
 
-        <section>
+        <section className='p-0 m-3'> 
             <div className="container-fluid p-0">
                 <div className="row justify-content-center mb-1">
                     <div className="col-12 col-md-5 text-center" >
@@ -42,7 +42,7 @@ export default async function Leadership(props: LeadershipProps) {
 : <p>Loading image...</p>}</a>
                                     
                                 </div>
-                                <div className="card-body p-11">
+                                <div className="card-body p-6">
                                     <a href={`/article/${leadership.slug}`} className="card-title mb-15px fw-600 fs-18 lh-26 text-dark-gray d-inline-block">{leadership.title}</a>
                                     <p>{leadership.summary}</p>
                                     

@@ -162,3 +162,50 @@ a, body {
 .AdSectionFooter{
 max-width: 800px;
 }
+
+header .navbar-brand .alt-logo, header .navbar-brand .default-logo {
+    visibility: visible !important; 
+    opacity: 1 !important; 
+     width: 100% !important; 
+}
+
+
+@media screen and (max-width: 600px) {
+    .blog-side-image .blog-box .blog-image {
+        min-height: auto;
+    }
+    .featured .blog-image img {
+        min-height: auto;
+        object-fit: cover;
+    }
+
+    .AdSectionFooter {
+        max-width: 800px;
+        width: 100%;
+    }
+    .magazine-section .category-image {
+        position: relative;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        margin: 0 auto;
+    }
+
+    .magazine-section .categories-box .category-title {
+        display:none !important;
+    }
+
+    section.pb-0.pt-15 {
+        padding-top:11rem !important;
+
+    }
+
+    .correct-fixed {
+        margin-top: 10rem;
+    }
+    .blog-grid {
+        display: flex;
+        grid-gap: 20px;
+    }
+  }
