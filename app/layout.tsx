@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
     <head>
 
-    <GoogleTagManager gtmId="GTM-WWPXG74M"/>
+    <GoogleTagManager gtmId="GTM-5PW3XK2P"/>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link rel="stylesheet" href="/css/vendors.min.css" />
