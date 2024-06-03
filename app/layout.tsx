@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/app/Header";
 import Footer from "@/app/Footer";
@@ -19,6 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
+
+    <GoogleTagManager gtmId="GTM-WWPXG74M"/>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link rel="stylesheet" href="/css/vendors.min.css" />
