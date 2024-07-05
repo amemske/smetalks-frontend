@@ -90,6 +90,7 @@ footer .nav-link {
 .home-leadership-image img {
     max-height: 279px;
     width: 100%;
+    object-fit: cover;
 }
 
 header .header-top-bar {
@@ -169,6 +170,11 @@ header .navbar-brand .alt-logo, header .navbar-brand .default-logo {
      width: 100% !important; 
 }
 
+blog-grid .card .blog-image img {
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    height: 280px;
+}
 
 @media screen and (max-width: 600px) {
     .blog-side-image .blog-box .blog-image {
@@ -207,5 +213,9 @@ header .navbar-brand .alt-logo, header .navbar-brand .default-logo {
     .blog-grid {
         display: flex;
         grid-gap: 20px;
+    }
+    header .navbar-brand img {
+        max-height: 66px;
+        max-width: 193px;
     }
   }

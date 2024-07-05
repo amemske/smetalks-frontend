@@ -13,6 +13,7 @@ const post = data[0];
 const title = post.title.rendered; 
 const summary = post.content.rendered;
 const guest_author = post.acf.guest_author;
+const image_caption = post.acf.image_caption;
 const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || null;
 const category = post.category
 
@@ -47,7 +48,8 @@ const relatedPosts = relatedData.slice(0, 3).map(relatedPost => {
                
                 <div className="col-lg-10 mb-1 sm-mb-35px last-paragraph-no-margin text-center">
                 {imageUrl ? <img src={imageUrl} alt="" /> : <p>Loading...</p>}
-                  
+                <p className="pb-25px text-center text-dark-gray ls-1px fw-700 ">{image_caption ? image_caption : <p>Loading...</p> }</p>
+               
                 </div>
                 <div className="col-lg-10 mb-1 sm-mb-35px last-paragraph-no-margin">
                     <div className="w-90 lg-w-100 content">
